@@ -182,8 +182,8 @@
                             "highlight": "a Better Tomorrow",
                             "description": "We build modern, sustainable, and comfortable homes that bring a better lifestyle to you and your family.",
                             "button": {
-                                "label": "Know More",
-                                "href": "#services"
+                                "label": "Explore Properties",
+                                "href": "#properties"
                             },
                             "image": {
                                 "src": "/other/about-1.webp",
