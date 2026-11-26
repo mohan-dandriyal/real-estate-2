@@ -1,0 +1,644 @@
+{
+    "common": {
+        "brand": {
+            "name": "PrimeEstate",
+            "tagline": "Realty",
+            "logo": "/main logo/logo.png",
+            "logoWidth": 2172,
+            "logoHeight": 724,
+            "href": "#home"
+        },
+        "Footer": {
+            "logo": {
+                "image": "/main logo/white-logo.png",
+                "alt": "PrimeEstate"
+            },
+            "description": "Modern homes. Better living.",
+            "wordmarkAccent": "Estate",
+            "linkGroups": [
+                {
+                    "label": "Quick Links",
+                    "hrefs": [
+                        "#home",
+                        "#about",
+                        "#properties"
+                    ]
+                },
+                {
+                    "label": "Support",
+                    "hrefs": [
+                        "#amenities",
+                        "#gallery",
+                        "#contact"
+                    ]
+                }
+            ],
+            "contact" : {
+                "title" : "Contact Us",
+                "details": [
+                                {
+                                    "id": 1,
+                                    "icon": "phone",
+                                    "value": "+1 (000) 000 0000",
+                                    "href": "tel:+10000000000"
+                                },
+                                {
+                                    "id": 2,
+                                    "icon": "mail",
+                                    "value": "info@xyz.com",
+                                    "href": "mailto:info@xyz.com"
+                                },
+                                {
+                                    "id": 3,
+                                    "icon": "map-pin",
+                                    "value": "3170 Rosewood Lane Unit 200, Beverly Hills, CA 90210",
+                                    "href": ""
+                                }
+                            ]
+            },
+            "rights": "All Rights Reserved. Powered by Lestow.",
+            "socials": [
+                {
+                    "label": "Facebook",
+                    "href": "www.facebook.com"
+                },
+                {
+                    "label": "Instagram",
+                    "href": "www.instagram.com"
+                },
+                {
+                    "label": "LinkedIn",
+                    "href": "www.linkedIn.com"
+                },
+                {
+                    "label": "YouTube",
+                    "href": "www.YouTube.com"
+                }
+            ]
+        }
+    },
+    "categories": {
+        "PrimeEstate": {
+            "sections": {
+                "Header": {
+                    "variants": {
+                        "PrimeEstateHeader2": {
+                            "nav": [
+                                {
+                                    "label": "Home",
+                                    "href": "#home"
+                                },
+                                {
+                                    "label": "About",
+                                    "href": "#about"
+                                },
+                                {
+                                    "label": "Amenities",
+                                    "href": "#amenities"
+                                },
+                                {
+                                    "label": "Properties",
+                                    "href": "#properties"
+                                },
+                                {
+                                    "label": "Floor Plan",
+                                    "href": "#floor-plan"
+                                },
+                                {
+                                    "label": "Gallery",
+                                    "href": "#gallery"
+                                },
+                                {
+                                    "label": "Contact",
+                                    "href": "#contact"
+                                }
+                            ],
+                            "phone": {
+                                "label": "+1 (000) 000 0000",
+                                "href": "tel:+10000000000"
+                            },
+                            "cta": {
+                                "label": "Enquire Now",
+                                "href": "#contact"
+                            }
+                        }
+                    }
+                },
+                "Hero": {
+                    "variants": {
+                        "PrimeEstateHero2": {
+                            "eyebrow": "The art of exceptional living",
+                            "title": "Discover a life",
+                            "highlight": "more extraordinary.",
+                            "description": [
+                                "Exceptional homes for extraordinary lifestyles.",
+                                "Presented by PrimeEstate Realty."
+                            ],
+                            "cta": {
+                                "label": "Explore Residences",
+                                "href": "#properties"
+                            },
+                            "scroll": {
+                                "label": "Scroll to Discover",
+                                "href": "#search"
+                            },
+                            "settings": {
+                                "autoplay": true,
+                                "interval": 6500,
+                                "duration": 1.4
+                            },
+                            "slides": [
+                                {
+                                    "id": 1,
+                                    "image": "/other/hero-1.webp",
+                                    "alt": "Skyline Greens apartment towers overlooking landscaped gardens",
+                                    "location": "Sector 73 · Noida",
+                                    "position": "center"
+                                },
+                                {
+                                    "id": 2,
+                                    "image": "/other/hero-2.webp",
+                                    "alt": "Skyline Heights residences beside a sunlit outdoor pool",
+                                    "location": "Sector 150 · Noida",
+                                    "position": "center"
+                                },
+                                {
+                                    "id": 3,
+                                    "image": "/other/hero-3.webp",
+                                    "alt": "Skyline Grand apartments surrounding a green courtyard",
+                                    "location": "Sector 137 · Noida",
+                                    "position": "center"
+                                }
+                            ]
+                        }
+                    }
+                },
+                "AboutUs": {
+                    "variants": {
+                        "PrimeEstateAboutUs2": {
+                            "id": "about",
+                            "subtitle": "About Us",
+                            "title": "Creating Spaces for",
+                            "highlight": "a Better Tomorrow",
+                            "description": "We build modern, sustainable, and comfortable homes that bring a better lifestyle to you and your family.",
+                            "button": {
+                                "label": "Know More",
+                                "href": "#services"
+                            },
+                            "image": {
+                                "src": "/other/about-1.webp",
+                                "alt": "Modern luxury living room interior"
+                            },
+                            "background": {
+                                "src": "/other/about-2.webp",
+                                "alt": "PrimeEstate luxury residential apartments"
+                            },
+                            "profile": {
+                                "name": "PrimeEstate Realty",
+                                "designation": "Built on trust. Designed for life."
+                            }
+                        }
+                    }
+                },
+                "Amenities": {
+                    "variants": {
+                        "PrimeEstateAmenities2": {
+                            "id": "amenities",
+                            "subtitle": "Our Amenities",
+                            "title": "A Lifestyle of Comfort & Convenience",
+                            "decoration": {
+                                "image": "/other/leaf-1.jfif",
+                                "alt": "Decorative palm leaves"
+                            },
+                            "items": [
+                                {
+                                    "id": 1,
+                                    "title": "Swimming Pool",
+                                    "icon": "swimming"
+                                },
+                                {
+                                    "id": 2,
+                                    "title": "Fully Equipped Gym",
+                                    "icon": "dumbbell"
+                                },
+                                {
+                                    "id": 5,
+                                    "title": "Clubhouse",
+                                    "icon": "building"
+                                },
+                                {
+                                    "id": 6,
+                                    "title": "Kids Play Area",
+                                    "icon": "blocks"
+                                },
+                                {
+                                    "id": 3,
+                                    "title": "Landscaped Gardens",
+                                    "icon": "trees"
+                                },
+                                {
+                                    "id": 7,
+                                    "title": "Indoor Games",
+                                    "icon": "gamepad"
+                                },
+                                {
+                                    "id": 8,
+                                    "title": "Ample Parking",
+                                    "icon": "car"
+                                },
+                                {
+                                    "id": 4,
+                                    "title": "24x7 Security",
+                                    "icon": "shield-check"
+                                }
+                            ]
+                        }
+                    }
+                },
+                "FloorPlan": {
+                    "variants": {
+                        "PrimeEstateFloorPlan2": {
+                            "id": "floor-plan",
+                            "eyebrow": "Floor Plan",
+                            "title": "Choose your Perfect Floor Plan",
+                            "subtitle": "Thoughtfully designed homes with spacious layouts, modern living and maximum comfort.",
+                            "areaLabel": "Carpet Area:",
+                            "items": [
+                                {
+                                    "id": 1,
+                                    "tab": "2 BHK",
+                                    "title": "2 BHK Apartment",
+                                    "area": "780 - 860 sq. ft.",
+                                    "features": [
+                                        "2 Bedrooms",
+                                        "2 Bathrooms",
+                                        "Living & Dining",
+                                        "Modular Kitchen",
+                                        "Balcony with View"
+                                    ],
+                                    "image": "/other/floor-2.webp",
+                                    "alt": "2 BHK apartment floor plan"
+                                },
+                                {
+                                    "id": 2,
+                                    "tab": "3 BHK",
+                                    "title": "3 BHK Apartment",
+                                    "area": "1150 - 1450 sq. ft.",
+                                    "features": [
+                                        "3 Spacious Bedrooms",
+                                        "3 Bathrooms",
+                                        "Spacious Living & Dining",
+                                        "Modular Kitchen",
+                                        "Private Balconies",
+                                        "Utility Area"
+                                    ],
+                                    "image": "/other/floor-2.webp",
+                                    "alt": "3 BHK apartment floor plan"
+                                },
+                                {
+                                    "id": 3,
+                                    "tab": "4 BHK",
+                                    "title": "4 BHK Apartment",
+                                    "area": "1800 - 2200 sq. ft.",
+                                    "features": [
+                                        "4 Luxury Bedrooms",
+                                        "4 Bathrooms",
+                                        "Premium Living & Dining",
+                                        "Modern Modular Kitchen",
+                                        "Spacious Private Balconies",
+                                        "Dedicated Utility Area",
+                                        "Walk-in Wardrobe"
+                                    ],
+                                    "image": "/other/floor-2.webp",
+                                    "alt": "4 BHK apartment floor plan"
+                                }
+                            ]
+                        }
+                    }
+                },
+                "Projects": {
+                    "variants": {
+                        "PrimeEstateProjects2": {
+                            "id": "properties",
+                            "subtitle": "Featured Properties",
+                            "title": "Handpicked Homes for You",
+                            "items": [
+                                {
+                                    "id": 1,
+                                    "title": "The Garden Residences",
+                                    "location": "Sector 73, Noida",
+                                    "image": "/other/Propertie-1.webp",
+                                    "alt": "Landscaped apartment residences",
+                                    "href": "#contact"
+                                },
+                                {
+                                    "id": 2,
+                                    "title": "The Heights",
+                                    "location": "Sector 150, Noida",
+                                    "image": "/other/Propertie-2.webp",
+                                    "alt": "Luxury apartment residences",
+                                    "href": "#contact"
+                                },
+                                {
+                                    "id": 3,
+                                    "title": "Central Park Residences",
+                                    "location": "Sector 62, Noida",
+                                    "image": "/other/Propertie-3.webp",
+                                    "alt": "Modern apartment residences",
+                                    "href": "#contact"
+                                },
+                                {
+                                    "id": 4,
+                                    "title": "The Courtyard Villas",
+                                    "location": "Sector 128, Noida",
+                                    "image": "/other/Propertie-4.webp",
+                                    "alt": "Private villas",
+                                    "href": "#contact"
+                                },
+                                {
+                                    "id": 5,
+                                    "title": "The Grand Residences",
+                                    "location": "Sector 137, Noida",
+                                    "image": "/other/Propertie-5.webp",
+                                    "alt": "Premium apartment residences",
+                                    "href": "#contact"
+                                },
+                                {
+                                    "id": 6,
+                                    "title": "Parkside Residences",
+                                    "location": "Sector 78, Noida",
+                                    "image": "/other/Propertie-6.webp",
+                                    "alt": "Residences with landscaped grounds",
+                                    "href": "#contact"
+                                }
+                            ]
+                        }
+                    }
+                },
+                "Gallery": {
+                    "variants": {
+                        "PrimeEstateGallery2": {
+                            "id": "gallery",
+                            "subtitle": "Our Project Gallery",
+                            "title": "Experience Exceptional Living",
+                            "settings": {
+                                "autoplay": true,
+                                "delay": 5000,
+                                "speed": 900
+                            },
+                            "items": [
+                                {
+                                    "id": 1,
+                                    "title": "The Neighborhood",
+                                    "description": "Enjoy exceptional connectivity to business hubs, green spaces, dining, and lifestyle destinations.",
+                                    "image": "/other/gallery-1.webp",
+                                    "alt": "Beautiful modern residential neighborhood",
+                                    "button": {
+                                        "label": "The Neighborhood",
+                                        "href": "#contact"
+                                    }
+                                },
+                                {
+                                    "id": 2,
+                                    "title": "Family Living",
+                                    "description": "Create unforgettable memories in thoughtfully designed homes with beautiful outdoor spaces.",
+                                    "image": "/other/gallery-2.webp",
+                                    "alt": "Luxury family residence with landscaped garden",
+                                    "button": {
+                                        "label": "Family Living",
+                                        "href": "#contact"
+                                    }
+                                },
+                                {
+                                    "id": 3,
+                                    "title": "Modern Interiors",
+                                    "description": "Experience elegant interiors that combine premium finishes, functionality, and timeless design.",
+                                    "image": "/other/Propertie-2.webp",
+                                    "alt": "Skyline Central modern apartments",
+                                    "button": {
+                                        "label": "Explore Interiors",
+                                        "href": "#contact"
+                                    }
+                                },
+                                {
+                                    "id": 4,
+                                    "title": "Luxury Amenities",
+                                    "description": "Discover thoughtfully curated amenities that bring relaxation, wellness, and recreation together.",
+                                    "image": "/other/Propertie-4.webp",
+                                    "alt": "Skyline Villas private residences",
+                                    "button": {
+                                        "label": "Explore Amenities",
+                                        "href": "#amenities"
+                                    }
+                                },
+                                {
+                                    "id": 5,
+                                    "title": "Beautiful Residences",
+                                    "description": "Find your perfect home in an exclusive collection of contemporary luxury residences.",
+                                    "image": "/other/hero-2.webp",
+                                    "alt": "Skyline Grand premium apartments",
+                                    "button": {
+                                        "label": "View Residences",
+                                        "href": "#properties"
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                },
+                "Testimonials": {
+                    "variants": {
+                        "PrimeEstateTestimonials2": {
+                            "id": "testimonials",
+                            "subtitle": "Testimonial",
+                            "title": "What Our",
+                            "highlight": "Clients Say",
+                            "settings": {
+                                "autoplay": true,
+                                "delay": 4000,
+                                "speed": 800
+                            },
+                            "items": [
+                                {
+                                    "id": 1,
+                                    "name": "Rohan Mehta",
+                                    "designation": "Homeowner",
+                                    "description": "A smooth buying experience and excellent support throughout.",
+                                    "image": "/other/profile-2.jpg",
+                                    "rating": 5
+                                },
+                                {
+                                    "id": 2,
+                                    "name": "Priya Sharma",
+                                    "designation": "Homeowner",
+                                    "description": "Beautiful homes, excellent quality and a truly professional team.",
+                                    "image": "/other/profile-1.jpg",
+                                    "rating": 5
+                                },
+                                {
+                                    "id": 3,
+                                    "name": "Amit Verma",
+                                    "designation": "Property Investor",
+                                    "description": "PrimeEstate made finding the perfect investment simple and stress-free.",
+                                    "image": "/other/profile-3.jpg",
+                                    "rating": 5
+                                },
+                                {
+                                    "id": 4,
+                                    "name": "Neha Kapoor",
+                                    "designation": "Homeowner",
+                                    "description": "We found our dream home with wonderful amenities and a peaceful environment.",
+                                    "image": "/other/profile-5.jpg",
+                                    "rating": 5
+                                },
+                                {
+                                    "id": 5,
+                                    "name": "Rahul Gupta",
+                                    "designation": "Property Buyer",
+                                    "description": "Transparent communication, great locations and exceptional customer service.",
+                                    "image": "/other/profile-4.jpg",
+                                    "rating": 5
+                                },
+                                {
+                                    "id": 6,
+                                    "name": "Anjali Singh",
+                                    "designation": "Homeowner",
+                                    "description": "A wonderful experience from our first visit to receiving the keys to our new home.",
+                                    "image": "/other/profile-6.jpg",
+                                    "rating": 5
+                                }
+                            ]
+                        }
+                    }
+                },
+                "Contact": {
+                    "variants": {
+                        "PrimeEstateContact2": {
+                            "id": "contact",
+                            "subtitle": "Contact Us",
+                            "title": "Let's Talk About",
+                            "highlight": "Your Dream Home",
+                            "description": "Have a question, need more information, or want to schedule a site visit? Get in touch with us today!",
+                            "background": "/other/contact-bg.jfif",
+                            "details": [
+                                {
+                                    "id": 1,
+                                    "icon": "phone",
+                                    "value": "+1 (000) 000 0000",
+                                    "href": "tel:+10000000000"
+                                },
+                                {
+                                    "id": 2,
+                                    "icon": "mail",
+                                    "value": "info@xyz.com",
+                                    "href": "mailto:info@xyz.com"
+                                },
+                                {
+                                    "id": 3,
+                                    "icon": "map-pin",
+                                    "value": "3170 Rosewood Lane Unit 200, Beverly Hills, CA 90210",
+                                    "href": ""
+                                }
+                            ],
+                            "form": {
+                                "title": "Enquire Now",
+                                "fields": [
+                                    {
+                                        "name": "name",
+                                        "placeholder": "Your Name",
+                                        "type": "text",
+                                        "icon": "user",
+                                        "required": true
+                                    },
+                                    {
+                                        "name": "phone",
+                                        "placeholder": "Your Phone",
+                                        "type": "tel",
+                                        "icon": "phone",
+                                        "required": true
+                                    },
+                                    {
+                                        "name": "email",
+                                        "placeholder": "Your Email",
+                                        "type": "email",
+                                        "icon": "mail",
+                                        "required": true
+                                    },
+                                    {
+                                        "name": "interest",
+                                        "placeholder": "Interested In",
+                                        "type": "select",
+                                        "icon": "building",
+                                        "required": true,
+                                        "options": [
+                                            "Residential Apartments",
+                                            "Luxury Villas",
+                                            "Commercial Properties",
+                                            "Property Investment",
+                                            "Schedule a Site Visit"
+                                        ]
+                                    },
+                                    {
+                                        "name": "message",
+                                        "placeholder": "Your Message",
+                                        "type": "textarea",
+                                        "icon": "message",
+                                        "required": false
+                                    }
+                                ],
+                                "button": "Submit Enquiry",
+                                "loadingText": "Submitting...",
+                                "successMessage": "Thank you! Our team will contact you shortly.",
+                                "errorMessage": "Unable to submit your enquiry. Please try again."
+                            }
+                        }
+                    }
+                }
+            },
+            "templateComponents": {
+                "shared": {
+                    "Header": "PrimeEstateHeader2",
+                    "Footer": "PrimeEstateFooter2"
+                },
+                "pages": {
+                    "home": {
+                        "components": [
+                            {
+                                "key": "HeroSection",
+                                "component": "PrimeEstateHero2"
+                            },
+                            {
+                                "key": "AboutUs",
+                                "component": "PrimeEstateAboutUs2"
+                            },
+                            {
+                                "key": "Amenities",
+                                "component": "PrimeEstateAmenities2"
+                            },
+                            {
+                                "key": "FloorPlan",
+                                "component": "PrimeEstateFloorPlan2"
+                            },
+                            {
+                                "key": "Projects",
+                                "component": "PrimeEstateProjects2"
+                            },
+                            {
+                                "key": "Gallery",
+                                "component": "PrimeEstateGallery2"
+                            },
+                            {
+                                "key": "Testimonials",
+                                "component": "PrimeEstateTestimonials2"
+                            },
+                            {
+                                "key": "Contact",
+                                "component": "PrimeEstateContact2"
+                            }
+                        ]
+                    }
+                }
+            }
+        }
+    }
+}

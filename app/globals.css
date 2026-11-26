@@ -1,0 +1,131 @@
+@import "tailwindcss";
+
+@theme inline {
+  --font-sans: var(--font-manrope);
+  --font-display: var(--font-cormorant);
+
+  --color-primary: #102139;
+  --color-secondary: #e9a313;
+  --color-ivory: #f5f1e8;
+}
+
+:root {
+  --background: #f5f1e8;
+  --foreground: #102139;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 90px;
+}
+
+@media (width < 64rem) {
+  html:has([data-mobile-menu-open]) {
+    overflow: hidden;
+    overscroll-behavior: none;
+  }
+}
+
+body {
+  margin: 0;
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-manrope), sans-serif;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+button {
+  cursor: pointer;
+}
+
+button:focus-visible,
+a:focus-visible {
+  outline: 2px solid #e9a313;
+  outline-offset: 5px;
+}
+
+::selection {
+  background: #e9a313;
+  color: #102139;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+
+.testimonial-swiper {
+  width: 100%;
+  min-width: 0;
+  padding: 8px 8px 42px !important;
+}
+
+/* EQUAL CARD HEIGHT */
+
+.testimonial-swiper .swiper-wrapper {
+  align-items: stretch;
+}
+
+.testimonial-swiper .swiper-slide {
+  display: flex;
+  height: auto !important;
+}
+
+.testimonial-swiper .swiper-slide > article {
+  width: 100%;
+  min-height: 190px;
+}
+
+/* PAGINATION POSITION */
+
+.testimonial-swiper .swiper-pagination {
+  bottom: 4px !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+}
+
+/* INACTIVE PAGINATION */
+
+.testimonial-swiper .swiper-pagination-bullet {
+  width: 9px;
+  height: 9px;
+  margin: 0 !important;
+  border-radius: 50%;
+  background: #cbd0d7;
+  opacity: 1;
+
+  transition:
+    background-color 0.3s ease,
+    transform 0.3s ease;
+}
+
+/* ACTIVE PAGINATION */
+
+.testimonial-swiper .swiper-pagination-bullet-active {
+  background: #e69203;
+  transform: scale(1.15);
+}
+
+/* MOBILE */
+
+@media (max-width: 767px) {
+  .testimonial-swiper .swiper-slide > article {
+    min-height: 170px;
+  }
+}
+
+/* REDUCED MOTION */
+
+@media (prefers-reduced-motion: reduce) {
+  .testimonial-swiper .swiper-pagination-bullet {
+    transition: none;
+  }
+}
