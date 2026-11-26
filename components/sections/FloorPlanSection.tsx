@@ -28,7 +28,7 @@ export default function FloorPlanSection() {
             {floorPlanData.eyebrow}
             <span aria-hidden="true" className="h-px w-10 bg-[#c78927] sm:w-24" />
           </p>
-          <SectionTitle id="floor-plan-title" className="mt-5 text-[#18140f] sm:mt-7">
+          <SectionTitle id="floor-plan-title" className="mt-5  sm:mt-7">
             {floorPlanData.title}
           </SectionTitle>
           <SectionDescription className="mx-auto mt-4 max-w-3xl text-base leading-relaxed text-[#102139] sm:mt-6 sm:text-xl">

@@ -249,12 +249,6 @@ export default function ProjectGallery() {
                         "
                       />
                     )}
-
-                    {/* ========================================
-                        ACTIVE SLIDE CONTENT
-                    ======================================== */}
-
-               
                   </article>
                 </SwiperSlide>
               );
