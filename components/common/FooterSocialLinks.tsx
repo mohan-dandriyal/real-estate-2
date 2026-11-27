@@ -76,7 +76,7 @@ export default function FooterSocialLinks({ socials }: { socials: Social[] }) {
               <motion.a
                 href={href}
                 aria-label={label}
-                className={`${socialStyle} transition-colors hover:border-secondary hover:bg-secondary hover:text-primary focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-secondary`}
+                className={`${socialStyle} transition-colors hover:border-[#f1c466] hover:bg-[#f1c466] hover:text-[#102139] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#f1c466]`}
                 variants={link}
                 initial="rest"
                 whileHover={reduce ? undefined : "hover"}
@@ -86,7 +86,7 @@ export default function FooterSocialLinks({ socials }: { socials: Social[] }) {
                 <motion.span
                   aria-hidden="true"
                   variants={ring}
-                  className="pointer-events-none absolute -inset-px rounded-full border-2 border-secondary"
+                  className="pointer-events-none absolute -inset-px rounded-full border-2 border-[#f1c466]"
                 />
                 <motion.span aria-hidden="true" variants={icon} className="grid place-items-center">
                   {glyph}

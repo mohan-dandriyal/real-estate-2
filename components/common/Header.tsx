@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
-import { ArrowRight, Menu, Phone, X } from "lucide-react";
+import { ArrowRight, Menu, X } from "lucide-react";
 
 import type { brandDataType, headerDataType } from "@/type/template.type";
 
@@ -11,10 +11,8 @@ type HeaderProps = {
     headerData: headerDataType;
 };
 
-const phoneClass =
-    "inline-flex min-h-9 items-center justify-center gap-2 whitespace-nowrap rounded-full border border-[#d59620] px-4 text-sm font-semibold hover:bg-amber-50";
 const enquiryClass =
-    "inline-flex min-h-9 items-center justify-center gap-2 whitespace-nowrap rounded-full bg-linear-to-b from-[#b97909] to-[#935c04] px-5 text-sm font-semibold text-white hover:brightness-110";
+    "brand-button inline-flex min-h-11 items-center justify-center gap-2 whitespace-nowrap rounded border border-[#805008] bg-[#805008] px-4 text-sm font-semibold text-white transition-colors hover:bg-[#664006]";
 
 export default function Header({ brand, headerData }: HeaderProps) {
     const [menuOpen, setMenuOpen] = useState(false);
@@ -95,8 +93,8 @@ export default function Header({ brand, headerData }: HeaderProps) {
                 href={href}
                 aria-current={active ? "location" : undefined}
                 onClick={() => setMenuOpen(false)}
-                className={`border-b-2 py-2 text-sm font-semibold transition-colors hover:border-[#d59620] ${
-                    active ? "border-[#d59620]" : "border-transparent"
+                className={`border-b-2 py-2 text-sm font-semibold transition-colors hover:border-secondary hover:text-[#805008] ${
+                    active ? "border-secondary" : "border-transparent"
                 }`}
             >
                 {label}
@@ -105,22 +103,16 @@ export default function Header({ brand, headerData }: HeaderProps) {
     });
 
     const contactActions = (
-        <>
-            {/* <a href={headerData.phone.href} className={phoneClass} onClick={() => setMenuOpen(false)}>
-                <Phone size={15} className="text-[#a36500]" aria-hidden="true" />
-                {headerData.phone.label}
-            </a> */}
-            <a href={headerData.cta.href} className={enquiryClass} onClick={() => setMenuOpen(false)}>
-                {headerData.cta.label}
-                <ArrowRight size={16} aria-hidden="true" />
-            </a>
-        </>
+        <a href={headerData.cta.href} className={enquiryClass} onClick={() => setMenuOpen(false)}>
+            {headerData.cta.label}
+            <ArrowRight size={16} aria-hidden="true" />
+        </a>
     );
 
     return (
         <header
             data-mobile-menu-open={menuOpen ? "" : undefined}
-            className="sticky top-0 z-50 border-b border-slate-200 bg-white text-[#101b3c]"
+            className="sticky top-0 z-50 border-b border-[#e8ded0] bg-[#faf7f1] text-primary"
         >
             <div className="page-container flex min-h-[68px] items-center justify-between gap-4">
                 <a href={brand.href} className="shrink-0" onClick={() => setMenuOpen(false)}>
@@ -146,7 +138,7 @@ export default function Header({ brand, headerData }: HeaderProps) {
                     aria-expanded={menuOpen}
                     aria-controls="mobile-navigation"
                     onClick={() => setMenuOpen(!menuOpen)}
-                    className="grid size-11 place-items-center rounded-full border border-slate-200 lg:hidden"
+                    className="grid size-11 place-items-center rounded border border-[#d8c7a8] hover:bg-[#f2e8da] lg:hidden"
                 >
                     {menuOpen ? <X size={22} /> : <Menu size={22} />}
                 </button>
@@ -156,7 +148,7 @@ export default function Header({ brand, headerData }: HeaderProps) {
                 id="mobile-navigation"
                 aria-label="Mobile navigation"
                 inert={!menuOpen}
-                className={`page-container absolute inset-x-0 top-full max-h-[calc(100dvh-4.5rem)] overflow-y-auto overscroll-contain border-y border-slate-200 bg-white py-4 shadow-lg motion-safe:transition-[opacity,translate,visibility] motion-safe:duration-200 motion-safe:ease-out lg:hidden ${
+                className={`page-container absolute inset-x-0 top-full max-h-[calc(100dvh-4.5rem)] overflow-y-auto overscroll-contain border-y border-[#e8ded0] bg-[#faf7f1] py-4 shadow-lg motion-safe:transition-[opacity,translate,visibility] motion-safe:duration-200 motion-safe:ease-out lg:hidden ${
                     menuOpen
                         ? "visible opacity-100 motion-safe:translate-y-0"
                         : "invisible pointer-events-none opacity-0 motion-safe:-translate-y-2"

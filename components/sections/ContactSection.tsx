@@ -142,13 +142,13 @@ export default function ContactSection() {
   };
 
   const inputClass = `
-    w-full rounded-lg border border-[#102139]/15
-    bg-[#fafafa] py-3.5 pl-11 pr-4
+    w-full rounded border border-[#102139]/15
+    bg-[#faf7f1] py-3.5 pl-11 pr-4
     text-sm font-medium text-[#102139]
     outline-none transition-all duration-300
-    placeholder:text-[#64748b]
-    focus:border-[#e69203]
-    focus:ring-2 focus:ring-[#e69203]/10
+    placeholder:text-[#655a50]
+    focus:border-[#805008]
+    focus:ring-2 focus:ring-[#805008]/10
     disabled:cursor-not-allowed
     disabled:opacity-60
   `;
@@ -156,9 +156,10 @@ export default function ContactSection() {
   return (
     <section
       id={contact.id}
+      aria-labelledby="contact-title"
       className="
         relative isolate overflow-hidden
-        bg-[#f3f5fa]
+        border-t border-[#e8ded0] bg-[#f7f1e8] text-[#102139]
         section-spacing
       "
     >
@@ -171,7 +172,7 @@ export default function ContactSection() {
         className="
           pointer-events-none absolute
           inset-x-0 bottom-0 -z-10
-          h-[240px] opacity-30
+          h-[240px] opacity-15
           md:h-[320px]
         "
       >
@@ -191,7 +192,7 @@ export default function ContactSection() {
         className="
           pointer-events-none absolute inset-0
           -z-10 bg-gradient-to-b
-          from-[#f3f5fa] via-transparent
+          from-[#f7f1e8] via-transparent
           to-white/10
         "
       />
@@ -203,7 +204,7 @@ export default function ContactSection() {
       >
         <div
           className="
-            grid grid-cols-1 items-center
+            grid grid-cols-1 items-start
             gap-10
             lg:grid-cols-[0.85fr_1.15fr]
             lg:gap-16
@@ -225,7 +226,7 @@ export default function ContactSection() {
             }}
             className="
               relative lg:pr-12
-              lg:border-r lg:border-[#e69203]/70
+              lg:border-r lg:border-[#e8ded0]
             "
           >
             {/* SUBTITLE */}
@@ -237,10 +238,10 @@ export default function ContactSection() {
               className="
                 mb-4 flex items-center gap-3
                 text-xs font-bold uppercase
-                tracking-[0.25em] text-[#102139]
+                tracking-[0.19em] text-[#805008]
               "
             >
-              <span className="h-[2px] w-10 bg-[#e69203]" />
+              <span aria-hidden="true" className="h-px w-8 bg-[#805008]" />
 
               {contact.subtitle}
             </motion.div>
@@ -248,6 +249,7 @@ export default function ContactSection() {
             {/* TITLE */}
 
             <SectionTitle
+              id="contact-title"
               variants={
                 reduceMotion ? undefined : contentVariants
               }
@@ -257,7 +259,7 @@ export default function ContactSection() {
                 {contact.title}
               </span>
 
-              <span className="block">
+              <span className="block text-[#805008]">
                 {contact.highlight}
               </span>
             </SectionTitle>
@@ -270,7 +272,7 @@ export default function ContactSection() {
               }
               className="
                 mt-5 max-w-[450px]
-                text-base leading-relaxed text-[#475569]
+                text-base leading-relaxed text-[#50463d]
               "
             >
               {contact.description}
@@ -286,10 +288,10 @@ export default function ContactSection() {
 
                 const className = `
                   group flex items-center gap-4
-                  rounded-lg border border-[#102139]/10
-                  bg-white/70 px-4 py-3.5
+                  rounded border border-[#102139]/10
+                  bg-[#fffdfa] px-4 py-3.5
                   transition-all duration-300
-                  hover:border-[#e69203]/60
+                  hover:border-[#805008]/60
                   hover:bg-white
                   hover:shadow-sm
                 `;
@@ -301,7 +303,7 @@ export default function ContactSection() {
                       strokeWidth={1.8}
                       aria-hidden="true"
                       className="
-                        shrink-0 text-[#e69203]
+                        shrink-0 text-[#805008]
                         transition-transform duration-300
                         group-hover:scale-110
                         motion-reduce:transform-none
@@ -376,10 +378,9 @@ export default function ContactSection() {
               ease: EASE,
             }}
             className="
-              relative rounded-2xl
-              border border-white
-              bg-white p-5
-              shadow-[0_12px_40px_rgba(16,33,57,0.10)]
+              relative rounded
+              border border-[#e8ded0]
+              bg-[#fffdfa] p-5
               sm:p-7 lg:p-8
             "
           >
@@ -443,7 +444,7 @@ export default function ContactSection() {
                         className="
                           pointer-events-none
                           absolute left-3.5 top-4
-                          z-10 text-[#e69203]
+                          z-10 text-[#805008]
                         "
                       />
 
@@ -568,12 +569,12 @@ export default function ContactSection() {
                     : { scale: 0.98 }
                 }
                 className="
-                  group relative isolate mt-5
+                  brand-button group relative isolate mt-5
                   flex w-full items-center
                   justify-center gap-4
-                  overflow-hidden rounded-lg
+                  overflow-hidden rounded
                   bg-gradient-to-r
-                  from-[#e69203] to-[#b87500]
+                  from-[#805008] to-[#664006]
                   px-6 py-4
                   text-sm font-bold text-white
                   transition-all duration-500
@@ -613,7 +614,6 @@ export default function ContactSection() {
                       size={20}
                       className="
                         transition-transform duration-300
-                        group-hover:translate-x-1
                         motion-reduce:transform-none
                       "
                     />
@@ -638,7 +638,7 @@ export default function ContactSection() {
                       exit={{ opacity: 0 }}
                       className={`
                         mt-4 flex items-center
-                        gap-2 rounded-lg p-3 text-sm
+                        gap-2 rounded p-3 text-sm
                         ${
                           status === "success"
                             ? "bg-green-50 text-green-700"

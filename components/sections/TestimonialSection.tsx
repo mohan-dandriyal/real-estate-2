@@ -24,7 +24,6 @@ import { testimonialData } from "@/type/template.type";
 
 import "swiper/css";
 import "swiper/css/pagination";
-// import "./TestimonialSection.css";
 
 const testimonial = testimonialData;
 
@@ -36,9 +35,10 @@ export default function TestimonialSection() {
   return (
     <section
       id={testimonial.id}
+      aria-labelledby="testimonials-title"
       className="
         relative overflow-hidden
-        bg-[#fafafa]
+        border-t border-[#e8ded0] bg-[#f7f1e8] text-[#102139]
         section-spacing
       "
     >
@@ -78,7 +78,7 @@ export default function TestimonialSection() {
               ease: EASE,
             }}
             className="
-              text-center lg:text-left
+              text-left
             "
           >
             {/* SUBTITLE */}
@@ -86,22 +86,22 @@ export default function TestimonialSection() {
             <div
               className="
                 mb-4 flex items-center
-                justify-center gap-3
-                lg:justify-start
+                gap-3
               "
             >
               <span
+                aria-hidden="true"
                 className="
-                  h-[2px] w-9
-                  bg-[#e69203]
+                  h-px w-8
+                  bg-[#805008]
                 "
               />
 
               <span
                 className="
                   text-xs font-bold uppercase
-                  tracking-[0.25em]
-                  text-[#102139]
+                  tracking-[0.19em]
+                  text-[#805008]
                 "
               >
                 {testimonial.subtitle}
@@ -111,13 +111,14 @@ export default function TestimonialSection() {
             {/* TITLE */}
 
             <SectionTitle
+              id="testimonials-title"
               className="text-[#102139]"
             >
               <span className="block">
                 {testimonial.title}
               </span>
 
-              <span className="block">
+              <span className="block text-[#805008]">
                 {testimonial.highlight}
               </span>
             </SectionTitle>
@@ -207,12 +208,9 @@ export default function TestimonialSection() {
                     className="
                       group relative flex h-full
                       flex-col justify-between
-                      rounded-2xl
-                      border border-[#102139]/5
-                      bg-white p-5
-                      shadow-[0_4px_12px_rgba(16,33,57,0.08)]
-                      transition-shadow duration-500
-                      hover:shadow-[0_8px_20px_rgba(16,33,57,0.12)]
+                      rounded
+                      border border-[#e8ded0]
+                      bg-[#fffdfa] p-5
                       md:p-6
                     "
                   >
@@ -222,7 +220,7 @@ export default function TestimonialSection() {
 
                     <div
                       className="
-                        flex items-start gap-4
+                        grid gap-3
                       "
                     >
                       {/* QUOTE ICON */}
@@ -234,7 +232,7 @@ export default function TestimonialSection() {
                         aria-hidden="true"
                         className="
                           shrink-0 rotate-180
-                          text-[#e69203]
+                          text-[#805008]
                         "
                       />
 
@@ -242,10 +240,10 @@ export default function TestimonialSection() {
 
                       <p
                         className="
-                          text-sm font-medium
-                          leading-[1.75]
+                          font-display text-xl font-semibold
+                          leading-snug
                           text-[#102139]
-                          md:text-base
+                          md:text-xl
                         "
                       >
                         {item.description}
@@ -258,7 +256,7 @@ export default function TestimonialSection() {
 
                     <div
                       className="
-                        mt-6 flex flex-wrap
+                        mt-6 flex flex-wrap border-t border-[#e8ded0] pt-4
                         items-center justify-between
                         gap-3
                       "
@@ -313,7 +311,7 @@ export default function TestimonialSection() {
                           <p
                             className="
                               mt-1 text-xs
-                              text-[#64748b]
+                              text-[#50463d]
                             "
                           >
                             {item.designation}
@@ -342,7 +340,7 @@ export default function TestimonialSection() {
                               aria-hidden="true"
                               className={
                                 index < item.rating
-                                  ? "fill-[#e69203] text-[#e69203]"
+                                  ? "fill-[#805008] text-[#805008]"
                                   : "fill-gray-200 text-gray-200"
                               }
                             />

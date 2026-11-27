@@ -59,6 +59,56 @@ a:focus-visible {
   }
 }
 
+@media (prefers-reduced-motion: no-preference) {
+  .brand-button {
+    transition-property: background-color, border-color, color, box-shadow, translate;
+    transition-duration: 220ms;
+    transition-timing-function: ease;
+  }
+
+  .brand-button:enabled:hover,
+  a.brand-button:hover,
+  .brand-button:focus-visible {
+    translate: 0 -2px;
+    box-shadow: 0 7px 16px #80500830;
+  }
+
+  .brand-button svg {
+    transition: transform 220ms ease;
+  }
+
+  .brand-button:is(:hover, :focus-visible) svg {
+    transform: translateX(3px);
+  }
+
+  .image-zoom > img {
+    transition: transform 650ms ease-out;
+  }
+
+  .about-photo {
+    animation: about-float 7s ease-in-out infinite;
+  }
+
+  .about-photo:nth-child(2) {
+    animation-delay: -3.5s;
+  }
+
+  @keyframes about-float {
+    0%, 100% { translate: 0 0; }
+    50% { translate: 0 -8px; }
+  }
+
+  @media (hover: hover) {
+    .image-zoom:hover > img {
+      transform: scale(1.045);
+    }
+
+    .about-photo:hover > img {
+      transform: scale(1.09);
+    }
+  }
+}
+
 
 .testimonial-swiper {
   width: 100%;
@@ -99,7 +149,7 @@ a:focus-visible {
   height: 9px;
   margin: 0 !important;
   border-radius: 50%;
-  background: #cbd0d7;
+  background: #d6c6b5;
   opacity: 1;
 
   transition:
@@ -110,7 +160,7 @@ a:focus-visible {
 /* ACTIVE PAGINATION */
 
 .testimonial-swiper .swiper-pagination-bullet-active {
-  background: #e69203;
+  background: #805008;
   transform: scale(1.15);
 }
 

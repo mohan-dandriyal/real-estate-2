@@ -127,21 +127,11 @@
                 "Hero": {
                     "variants": {
                         "PrimeEstateHero2": {
-                            "eyebrow": "The art of exceptional living",
-                            "title": "Discover a life",
-                            "highlight": "more extraordinary.",
-                            "description": [
-                                "Exceptional homes for extraordinary lifestyles.",
-                                "Presented by PrimeEstate Realty."
+                            "quickLinks": [
+                                { "label": "Amenities", "href": "#amenities" },
+                                { "label": "Floor Plans", "href": "#floor-plan" },
+                                { "label": "Gallery", "href": "#gallery" }
                             ],
-                            "cta": {
-                                "label": "Explore Residences",
-                                "href": "#properties"
-                            },
-                            "scroll": {
-                                "label": "Scroll to Discover",
-                                "href": "#search"
-                            },
                             "settings": {
                                 "autoplay": true,
                                 "interval": 6500,
@@ -149,25 +139,31 @@
                             },
                             "slides": [
                                 {
+                                    "id": 0,
+                                    "title": "Discover Extraordinary",
+                                    "highlight": "Luxury Living",
+                                    "description": "Discover glass-fronted villas with poolside terraces and living spaces that open to the outdoors.",
+                                    "image": "/other/luxury-villa-hero.webp",
+                                    "alt": "Contemporary glass-fronted villa beside a turquoise pool",
+                                    "position": "right center"
+                                },
+                                {
                                     "id": 1,
-                                    "image": "/other/slide-1.webp",
-                                    "alt": "Skyline Greens apartment towers overlooking landscaped gardens",
-                                    "location": "Sector 73 · Noida",
-                                    "position": "center"
+                                    "title": "Come Home to",
+                                    "highlight": "Garden Living",
+                                    "description": "Explore contemporary residences with landscaped gardens and sheltered terraces for relaxed outdoor living.",
+                                    "image": "/other/luxury-garden-hero.webp",
+                                    "alt": "Contemporary limestone residence with a sheltered terrace and landscaped garden",
+                                    "position": "right center"
                                 },
                                 {
                                     "id": 2,
-                                    "image": "/other/slide-2.webp",
-                                    "alt": "Skyline Heights residences beside a sunlit outdoor pool",
-                                    "location": "Sector 150 · Noida",
-                                    "position": "center"
-                                },
-                                {
-                                    "id": 3,
-                                    "image": "/other/slide-3.webp",
-                                    "alt": "Skyline Grand apartments surrounding a green courtyard",
-                                    "location": "Sector 137 · Noida",
-                                    "position": "center"
+                                    "title": "Rise Above the City",
+                                    "highlight": "Skyline Living",
+                                    "description": "Discover light-filled penthouses with planted terraces and sweeping views across the city.",
+                                    "image": "/other/luxury-penthouse-hero.webp",
+                                    "alt": "Glass-fronted penthouse with a planted terrace overlooking the city",
+                                    "position": "right center"
                                 }
                             ]
                         }
@@ -186,12 +182,12 @@
                                 "href": "#properties"
                             },
                             "image": {
-                                "src": "/other/about-1.webp",
-                                "alt": "Modern luxury living room interior"
+                                "src": "/other/luxury-garden-hero.webp",
+                                "alt": "Limestone residence with a sheltered terrace and landscaped garden"
                             },
                             "background": {
-                                "src": "/other/about-2.webp",
-                                "alt": "PrimeEstate luxury residential apartments"
+                                "src": "/other/luxury-penthouse-hero.webp",
+                                "alt": "Glass-fronted penthouse with a planted terrace overlooking the city"
                             },
                             "profile": {
                                 "name": "PrimeEstate Realty",
@@ -206,9 +202,9 @@
                             "id": "amenities",
                             "subtitle": "Our Amenities",
                             "title": "A Lifestyle of Comfort & Convenience",
-                            "decoration": {
-                                "image": "/other/leaf-1.jfif",
-                                "alt": "Decorative palm leaves"
+                            "image": {
+                                "src": "/other/luxury-villa-hero.webp",
+                                "alt": "Turquoise swimming pool beside a contemporary villa"
                             },
                             "items": [
                                 {
@@ -263,6 +259,10 @@
                             "title": "Choose your Perfect Floor Plan",
                             "subtitle": "Thoughtfully designed homes with spacious layouts, modern living and maximum comfort.",
                             "areaLabel": "Carpet Area:",
+                            "cta": {
+                                "label": "Enquire About Floor Plans",
+                                "href": "#contact"
+                            },
                             "items": [
                                 {
                                     "id": 1,
@@ -391,8 +391,8 @@
                                     "id": 1,
                                     "title": "The Neighborhood",
                                     "description": "Enjoy exceptional connectivity to business hubs, green spaces, dining, and lifestyle destinations.",
-                                    "image": "/other/gallery-3.webp",
-                                    "alt": "Beautiful modern residential neighborhood",
+                                    "image": "/other/gallery-neighborhood.webp",
+                                    "alt": "Tree-lined pedestrian path through a contemporary residential neighborhood",
                                     "button": {
                                         "label": "The Neighborhood",
                                         "href": "#contact"
@@ -402,8 +402,8 @@
                                     "id": 2,
                                     "title": "Family Living",
                                     "description": "Create unforgettable memories in thoughtfully designed homes with beautiful outdoor spaces.",
-                                    "image": "/other/gallery-1.webp",
-                                    "alt": "Luxury family residence with landscaped garden",
+                                    "image": "/other/gallery-family-living.webp",
+                                    "alt": "Family home with a sheltered dining terrace facing a landscaped lawn",
                                     "button": {
                                         "label": "Family Living",
                                         "href": "#contact"
@@ -413,8 +413,8 @@
                                     "id": 3,
                                     "title": "Modern Interiors",
                                     "description": "Experience elegant interiors that combine premium finishes, functionality, and timeless design.",
-                                    "image": "/other/slide-2.webp",
-                                    "alt": "Skyline Central modern apartments",
+                                    "image": "/other/gallery-interiors.webp",
+                                    "alt": "Living room with cream furnishings and floor-to-ceiling windows",
                                     "button": {
                                         "label": "Explore Interiors",
                                         "href": "#contact"
@@ -424,8 +424,8 @@
                                     "id": 4,
                                     "title": "Luxury Amenities",
                                     "description": "Discover thoughtfully curated amenities that bring relaxation, wellness, and recreation together.",
-                                    "image": "/other/slide-3.webp",
-                                    "alt": "Skyline Villas private residences",
+                                    "image": "/other/gallery-amenities.webp",
+                                    "alt": "Poolside amenity pavilion with shaded loungers and planted borders",
                                     "button": {
                                         "label": "Explore Amenities",
                                         "href": "#amenities"
@@ -435,8 +435,8 @@
                                     "id": 5,
                                     "title": "Beautiful Residences",
                                     "description": "Find your perfect home in an exclusive collection of contemporary luxury residences.",
-                                    "image": "/other/gallery-2.webp",
-                                    "alt": "Skyline Grand premium apartments",
+                                    "image": "/other/gallery-residences.webp",
+                                    "alt": "Contemporary apartment residences surrounding a landscaped courtyard",
                                     "button": {
                                         "label": "View Residences",
                                         "href": "#properties"

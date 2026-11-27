@@ -7,7 +7,6 @@ import Link from "next/link";
 
 import {
   motion,
-  AnimatePresence,
   useReducedMotion,
 } from "framer-motion";
 
@@ -37,6 +36,7 @@ export default function ProjectGallery() {
   const [activeIndex, setActiveIndex] = useState(0);
   const [isBeginning, setIsBeginning] = useState(true);
   const [isEnd, setIsEnd] = useState(false);
+  const activeItem = gallery.items[activeIndex];
 
   const reduceMotion = useReducedMotion();
 
@@ -76,9 +76,10 @@ export default function ProjectGallery() {
   return (
     <section
       id={gallery.id}
+      aria-labelledby="gallery-title"
       className="
         relative overflow-hidden
-        bg-white section-spacing
+        border-t border-[#e8ded0] bg-[#faf7f1] text-[#102139] section-spacing
       "
     >
       <div
@@ -105,33 +106,32 @@ export default function ProjectGallery() {
             duration: reduceMotion ? 0 : 0.9,
             ease: EASE,
           }}
-          className="mb-8 text-center md:mb-10"
+          className="mb-7 sm:mb-9"
         >
           {/* SUBTITLE */}
 
           <div
             className="
               mb-3 flex items-center
-              justify-center gap-4
+              gap-3
             "
           >
-            <span className="h-[2px] w-10 bg-[#e69203]" />
+            <span aria-hidden="true" className="h-px w-8 bg-[#805008]" />
 
             <span
               className="
                 text-xs font-bold uppercase
-                tracking-[0.25em] text-[#102139]
+                tracking-[0.19em] text-[#805008]
               "
             >
               {gallery.subtitle}
             </span>
-
-            <span className="h-[2px] w-10 bg-[#e69203]" />
           </div>
 
           {/* TITLE */}
 
           <SectionTitle
+            id="gallery-title"
             className="text-[#102139]"
           >
             {gallery.title}
@@ -197,7 +197,7 @@ export default function ProjectGallery() {
                   <article
                     className="
                       group relative h-full w-full
-                      overflow-hidden bg-[#102139]
+                      overflow-hidden rounded bg-[#102139]
                     "
                   >
                     {/* ========================================
@@ -262,20 +262,26 @@ export default function ProjectGallery() {
 
         <div
           className="
-            mt-7 flex flex-wrap items-center
-            justify-between gap-4
+            mt-4 grid items-center gap-4 rounded border border-[#e8ded0]
+            bg-[#fffdfa] p-4 sm:p-5 lg:grid-cols-[minmax(0,1fr)_auto_auto]
           "
         >
-          {/* SLIDE COUNTER */}
-
-          <div />
+          {activeItem && (
+            <div>
+              <h3 className="font-display text-2xl font-semibold">{activeItem.title}</h3>
+              <p className="mt-1 max-w-xl text-sm leading-relaxed text-[#50463d]">{activeItem.description}</p>
+              <Link href={activeItem.button.href} className="brand-button mt-2 inline-flex min-h-11 items-center gap-2 rounded px-2 text-sm font-semibold text-[#805008] hover:bg-[#f2e8da]">
+                {activeItem.button.label}
+                <ArrowRight size={16} aria-hidden="true" />
+              </Link>
+            </div>
+          )}
 
           {/* CUSTOM PAGINATION */}
 
           <div
             className="
-              hidden flex-1 items-center
-              justify-center gap-2 sm:flex
+              hidden items-center gap-2 lg:flex
             "
           >
             {gallery.items.map((item, index) => (
@@ -293,8 +299,8 @@ export default function ProjectGallery() {
                     transition-all duration-500
                     ${
                       activeIndex === index
-                        ? "w-10 bg-[#e69203]"
-                        : "w-5 bg-[#102139]/20 hover:bg-[#e69203]/50"
+                        ? "w-10 bg-[#805008]"
+                        : "w-5 bg-[#102139]/20 hover:bg-[#805008]/50"
                     }
                   `}
                 />
@@ -313,11 +319,11 @@ export default function ProjectGallery() {
               className="
                 flex h-11 w-11 items-center
                 justify-center rounded-full
-                border border-[#e69203]
-                text-[#e69203]
+                border border-[#805008]
+                text-[#805008]
                 transition-all duration-300
-                hover:bg-[#e69203]
-                hover:text-[#102139]
+                hover:bg-[#805008]
+                hover:text-white
                 disabled:cursor-not-allowed
                 disabled:border-gray-300
                 disabled:bg-transparent
@@ -335,11 +341,11 @@ export default function ProjectGallery() {
               className="
                 flex h-11 w-11 items-center
                 justify-center rounded-full
-                border border-[#e69203]
-                text-[#e69203]
+                border border-[#805008]
+                text-[#805008]
                 transition-all duration-300
-                hover:bg-[#e69203]
-                hover:text-[#102139]
+                hover:bg-[#805008]
+                hover:text-white
                 disabled:cursor-not-allowed
                 disabled:border-gray-300
                 disabled:bg-transparent

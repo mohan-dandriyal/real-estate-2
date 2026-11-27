@@ -5,18 +5,6 @@
 
 .project-gallery-swiper .project-gallery-slide {
   position: relative;
-  height: 580px;
+  height: clamp(14rem, 36vw, 32rem);
   overflow: hidden;
-}
-
-@media (max-width: 1023px) {
-  .project-gallery-swiper .project-gallery-slide {
-    height: 480px;
-  }
-}
-
-@media (max-width: 639px) {
-  .project-gallery-swiper .project-gallery-slide {
-    height: 440px;
-  }
 }
