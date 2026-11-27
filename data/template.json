@@ -150,21 +150,21 @@
                             "slides": [
                                 {
                                     "id": 1,
-                                    "image": "/other/hero-1.webp",
+                                    "image": "/other/slide-1.webp",
                                     "alt": "Skyline Greens apartment towers overlooking landscaped gardens",
                                     "location": "Sector 73 · Noida",
                                     "position": "center"
                                 },
                                 {
                                     "id": 2,
-                                    "image": "/other/hero-2.webp",
+                                    "image": "/other/slide-2.webp",
                                     "alt": "Skyline Heights residences beside a sunlit outdoor pool",
                                     "location": "Sector 150 · Noida",
                                     "position": "center"
                                 },
                                 {
                                     "id": 3,
-                                    "image": "/other/hero-3.webp",
+                                    "image": "/other/slide-3.webp",
                                     "alt": "Skyline Grand apartments surrounding a green courtyard",
                                     "location": "Sector 137 · Noida",
                                     "position": "center"
@@ -391,7 +391,7 @@
                                     "id": 1,
                                     "title": "The Neighborhood",
                                     "description": "Enjoy exceptional connectivity to business hubs, green spaces, dining, and lifestyle destinations.",
-                                    "image": "/other/gallery-1.webp",
+                                    "image": "/other/gallery-3.webp",
                                     "alt": "Beautiful modern residential neighborhood",
                                     "button": {
                                         "label": "The Neighborhood",
@@ -402,7 +402,7 @@
                                     "id": 2,
                                     "title": "Family Living",
                                     "description": "Create unforgettable memories in thoughtfully designed homes with beautiful outdoor spaces.",
-                                    "image": "/other/gallery-2.webp",
+                                    "image": "/other/gallery-1.webp",
                                     "alt": "Luxury family residence with landscaped garden",
                                     "button": {
                                         "label": "Family Living",
@@ -413,7 +413,7 @@
                                     "id": 3,
                                     "title": "Modern Interiors",
                                     "description": "Experience elegant interiors that combine premium finishes, functionality, and timeless design.",
-                                    "image": "/other/Propertie-2.webp",
+                                    "image": "/other/slide-2.webp",
                                     "alt": "Skyline Central modern apartments",
                                     "button": {
                                         "label": "Explore Interiors",
@@ -424,7 +424,7 @@
                                     "id": 4,
                                     "title": "Luxury Amenities",
                                     "description": "Discover thoughtfully curated amenities that bring relaxation, wellness, and recreation together.",
-                                    "image": "/other/Propertie-4.webp",
+                                    "image": "/other/slide-3.webp",
                                     "alt": "Skyline Villas private residences",
                                     "button": {
                                         "label": "Explore Amenities",
@@ -435,7 +435,7 @@
                                     "id": 5,
                                     "title": "Beautiful Residences",
                                     "description": "Find your perfect home in an exclusive collection of contemporary luxury residences.",
-                                    "image": "/other/hero-2.webp",
+                                    "image": "/other/gallery-2.webp",
                                     "alt": "Skyline Grand premium apartments",
                                     "button": {
                                         "label": "View Residences",
