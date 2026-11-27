@@ -1,22 +1,10 @@
 import Image from "next/image";
 import { cacheLife } from "next/cache";
+import { ChevronRight, Mail, MapPin, Phone, type LucideIcon } from "lucide-react";
 
-import {
-  ChevronRight,
-  Mail,
-  MapPin,
-  Phone,
-  type LucideIcon,
-} from "lucide-react";
-
-import {
-  brand,
-  footerData,
-  headerData,
-} from "@/type/template.type";
-
+import { brand, footerData, headerData } from "@/type/template.type";
+import FooterAnimation from "./FooterAnimation";
 import FooterSocialLinks from "./FooterSocialLinks";
-import FooterAnimation from "@/components/common/FooterAnimation";
 
 const contactIcons: Record<string, LucideIcon> = {
   phone: Phone,
@@ -24,141 +12,90 @@ const contactIcons: Record<string, LucideIcon> = {
   "map-pin": MapPin,
 };
 
+const headingClass = "font-display text-2xl font-semibold leading-tight text-primary";
+const linkClass = "motion-safe:transition-colors hover:text-[#805008] hover:underline focus-visible:text-[#805008]";
+
 export default async function Footer() {
   "use cache";
   cacheLife("days");
 
   return (
-    <footer className="border-t border-[#7a622f] bg-[#102139] py-5 text-[#faf7f1]">
-      <div className="page-container">
-        <div className="grid grid-cols-1 items-start gap-8 border-b border-[#faf7f1]/20 py-8 sm:grid-cols-2 lg:grid-cols-[1fr_1.4fr_1fr] lg:items-stretch lg:gap-0">
-
-          {/* Brand */}
-          <FooterAnimation
-            direction="right"
-            delay={0}
-            className="lg:border-r lg:border-[#faf7f1]/20 lg:pr-8"
-          >
-          <a href={brand.href} className="shrink-0">
-                    <Image
-                        src={footerData.logo.image}
-                        alt={`${brand.name} ${brand.tagline}`}
-                        width={brand.logoWidth}
-                        height={brand.logoHeight}
-                        preload
-                        className="h-auto w-40 lg:w-48 xl:w-[220px]"
-                    />
-                </a>
-
-            <p className="mt-3 max-w-xs text-sm leading-relaxed text-[#e9dbca]">
-              {footerData.description}
-            </p>
-          </FooterAnimation>
-
-          {/* Navigation Links */}
-          <nav
-            aria-label="Footer navigation"
-            className="grid grid-cols-2 gap-6 lg:px-8 xl:px-16"
-          >
-            {footerData.linkGroups.map((group, index) => (
-              <FooterAnimation
-                key={group.label}
-                direction="up"
-                delay={0.15 + index * 0.12}
-              >
-                <h2 className="inline-block border-b-2 border-[#e9a313] pb-1 font-display text-xl font-bold">
-                  {group.label}
-                </h2>
-
-                <ul className="mt-5 space-y-2 text-sm text-[#e9dbca]">
-                  {headerData.nav
-                    .filter(({ href }) =>
-                      group.hrefs.includes(href)
-                    )
-                    .map(({ href, label }) => (
-                      <li key={href}>
-                        <a
-                          href={href}
-                          className="group inline-flex font-medium items-center gap-1.5 hover:text-[#f1c466] focus-visible:text-[#f1c466] motion-safe:transition-colors"
-                        >
-                          <ChevronRight
-                            size={12}
-                            aria-hidden="true"
-                            className="motion-safe:transition-transform motion-safe:duration-300 motion-safe:group-hover:translate-x-1"
-                          />
-
-                          {label}
-                        </a>
-                      </li>
-                    ))}
-                </ul>
-              </FooterAnimation>
-            ))}
-          </nav>
-
-          {/* Contact Information */}
-          <FooterAnimation
-            direction="left"
-            delay={0.35}
-            className="lg:border-l lg:border-[#faf7f1]/20 lg:pl-8"
-          >
-            <h2 className="inline-block border-b-2 border-[#e9a313] pb-1 font-display text-xl font-bold">
-              {footerData.contact.title}
-            </h2>
-
-            <address className="mt-5 text-sm leading-relaxed text-[#e9dbca] not-italic">
-              <ul className="space-y-2">
-                {footerData.contact.details.map(
-                  ({ id, icon, value, href }) => {
-                    const Icon =
-                      contactIcons[icon] ?? MapPin;
-
-                    return (
-                      <li
-                        key={id}
-                        className="group flex items-start gap-2"
-                      >
-                        <Icon
-                          size={16}
-                          aria-hidden="true"
-                          className="mt-0.5 shrink-0 text-[#f1c466] motion-safe:transition-transform motion-safe:duration-300 motion-safe:group-hover:scale-110"
-                        />
-
-                        {href ? (
-                          <a
-                            href={href}
-                            className="min-w-0 wrap-break-word hover:text-[#f1c466] focus-visible:text-[#f1c466] motion-safe:transition-colors"
-                          >
-                            {value}
-                          </a>
-                        ) : (
-                          <span>{value}</span>
-                        )}
-                      </li>
-                    );
-                  }
-                )}
-              </ul>
-            </address>
-          </FooterAnimation>
-        </div>
-
-        {/* Bottom Bar */}
-        <FooterAnimation
-          direction="up"
-          delay={0.45}
-          className="flex flex-col items-center gap-4 py-4 sm:flex-row sm:justify-between"
-        >
-          <p className="text-center text-sm md:text-[15px] text-[#d9c6b0] sm:text-left">
-            &copy; {new Date().getFullYear()}{" "}
-            {brand.name} {" "} {brand.tagline}.{" "}
-            {footerData.rights}
+    <footer className="border-t border-[#e8ded0] bg-[#faf7f1] text-primary">
+      <div className="page-container grid gap-8 py-10 sm:grid-cols-2 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.35fr)_minmax(0,1fr)] lg:gap-10 lg:py-14">
+        <FooterAnimation direction="right" delay={0} className="sm:col-span-2 lg:col-span-1">
+          <a href={brand.href} className="inline-block">
+            <Image
+              src={footerData.logo.image}
+              alt={`${brand.name} ${brand.tagline}`}
+              width={brand.logoWidth}
+              height={brand.logoHeight}
+              className="h-auto w-44 lg:w-52"
+            />
+          </a>
+          <p className="mt-3 max-w-xs text-sm leading-relaxed text-[#50463d]">
+            {footerData.description}
           </p>
-
-          <FooterSocialLinks
-            socials={footerData.socials}
-          />
         </FooterAnimation>
+
+        <nav
+          aria-label="Footer navigation"
+          className="grid grid-cols-2 gap-5 border-y border-[#e8ded0] py-6 sm:border-y-0 sm:py-0 lg:border-x lg:px-8"
+        >
+          {footerData.linkGroups.map((group, index) => (
+            <FooterAnimation key={group.label} direction="up" delay={0.15 + index * 0.12}>
+              <h2 className={headingClass}>{group.label}</h2>
+              <ul className="mt-3 space-y-2 text-sm text-[#50463d]">
+                {headerData.nav
+                  .filter(({ href }) => group.hrefs.includes(href))
+                  .map(({ href, label }) => (
+                    <li key={href}>
+                      <a href={href} className={`group inline-flex items-center gap-1.5 ${linkClass}`}>
+                        <ChevronRight
+                          size={13}
+                          aria-hidden="true"
+                          className="shrink-0 text-[#805008] motion-safe:transition-transform motion-safe:group-hover:translate-x-0.5"
+                        />
+                        {label}
+                      </a>
+                    </li>
+                  ))}
+              </ul>
+            </FooterAnimation>
+          ))}
+        </nav>
+
+        <FooterAnimation direction="left" delay={0.35}>
+          <h2 className={headingClass}>{footerData.contact.title}</h2>
+          <address className="mt-3 text-sm leading-relaxed text-[#50463d] not-italic">
+            <ul className="space-y-3">
+              {footerData.contact.details.map(({ id, icon, value, href }) => {
+                const Icon = contactIcons[icon] ?? MapPin;
+
+                return (
+                  <li key={id} className="flex items-start gap-2.5">
+                    <Icon size={16} aria-hidden="true" className="mt-0.5 shrink-0 text-[#805008]" />
+                    {href ? (
+                      <a href={href} className={`min-w-0 wrap-break-word ${linkClass}`}>
+                        {value}
+                      </a>
+                    ) : (
+                      <span>{value}</span>
+                    )}
+                  </li>
+                );
+              })}
+            </ul>
+          </address>
+        </FooterAnimation>
+      </div>
+
+      <div className="border-t border-secondary/60 bg-[#232d33] text-[#faf7f1]">
+        <div className="page-container flex flex-col items-center gap-4 py-4 sm:flex-row sm:justify-between">
+          <p className="text-center text-sm leading-relaxed text-[#e9dbca] sm:text-left">
+            &copy; {new Date().getFullYear()} {brand.name} {brand.tagline}. {footerData.rights}
+          </p>
+          <FooterSocialLinks socials={footerData.socials} />
+        </div>
       </div>
     </footer>
   );

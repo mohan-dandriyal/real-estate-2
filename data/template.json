@@ -10,10 +10,10 @@
         },
         "Footer": {
             "logo": {
-                "image": "/main logo/white-logo.png",
+                "image": "/main logo/logo.png",
                 "alt": "PrimeEstate"
             },
-            "description": "Modern homes. Better living.",
+            "description": "Discover exceptional homes designed for modern living and lasting comfort.",
             "wordmarkAccent": "Estate",
             "linkGroups": [
                 {
@@ -60,19 +60,19 @@
             "socials": [
                 {
                     "label": "Facebook",
-                    "href": "www.facebook.com"
+                    "href": "https://www.facebook.com"
                 },
                 {
                     "label": "Instagram",
-                    "href": "www.instagram.com"
+                    "href": "https://www.instagram.com"
                 },
                 {
                     "label": "LinkedIn",
-                    "href": "www.linkedIn.com"
+                    "href": "https://www.linkedin.com"
                 },
                 {
                     "label": "YouTube",
-                    "href": "www.YouTube.com"
+                    "href": "https://www.youtube.com"
                 }
             ]
         }
