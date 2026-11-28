@@ -20,13 +20,13 @@ export default function Home() {
         <AboutSection />
         <AmenitiesSection />
         <ProjectsSection />
+        <FloorPlanSection />
         <Suspense>
           <ProjectGallery />
         </Suspense>
         <Suspense>
           <TestimonialSection />
         </Suspense>
-        <FloorPlanSection />
         <ContactSection />
       </main>
       <Footer />

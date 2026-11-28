@@ -127,11 +127,6 @@
                 "Hero": {
                     "variants": {
                         "PrimeEstateHero2": {
-                            "quickLinks": [
-                                { "label": "Amenities", "href": "#amenities" },
-                                { "label": "Floor Plans", "href": "#floor-plan" },
-                                { "label": "Gallery", "href": "#gallery" }
-                            ],
                             "settings": {
                                 "autoplay": true,
                                 "interval": 6500,
@@ -276,8 +271,8 @@
                                         "Modular Kitchen",
                                         "Balcony with View"
                                     ],
-                                    "image": "/other/floor-2.webp",
-                                    "alt": "2 BHK apartment floor plan"
+                                    "image": "/other/floor-plan-2-bhk.svg",
+                                    "alt": "Illustrative floor plan for the 2 BHK apartment"
                                 },
                                 {
                                     "id": 2,
@@ -292,8 +287,8 @@
                                         "Private Balconies",
                                         "Utility Area"
                                     ],
-                                    "image": "/other/floor-2.webp",
-                                    "alt": "3 BHK apartment floor plan"
+                                    "image": "/other/floor-plan-3-bhk.svg",
+                                    "alt": "Illustrative floor plan for the 3 BHK apartment"
                                 },
                                 {
                                     "id": 3,
@@ -309,8 +304,8 @@
                                         "Dedicated Utility Area",
                                         "Walk-in Wardrobe"
                                     ],
-                                    "image": "/other/floor-2.webp",
-                                    "alt": "4 BHK apartment floor plan"
+                                    "image": "/other/floor-plan-4-bhk.svg",
+                                    "alt": "Illustrative floor plan for the 4 BHK apartment"
                                 }
                             ]
                         }

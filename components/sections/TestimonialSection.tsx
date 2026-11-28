@@ -114,12 +114,9 @@ export default function TestimonialSection() {
               id="testimonials-title"
               className="text-[#102139]"
             >
-              <span className="block">
-                {testimonial.title}
-              </span>
-
-              <span className="block text-[#805008]">
-                {testimonial.highlight}
+              <span className="max-sm:whitespace-nowrap max-[360px]:text-[1.6rem]">
+                {testimonial.title}{" "}
+                <span className="text-[#805008] sm:block">{testimonial.highlight}</span>
               </span>
             </SectionTitle>
           </motion.div>

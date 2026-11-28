@@ -262,15 +262,19 @@ export default function ProjectGallery() {
 
         <div
           className="
-            mt-4 grid items-center gap-4 rounded border border-[#e8ded0]
+            mt-4 grid grid-rows-[minmax(0,1fr)_auto] items-center gap-4 rounded border border-[#e8ded0]
+            h-56 sm:h-48 lg:h-40
             bg-[#fffdfa] p-4 sm:p-5 lg:grid-cols-[minmax(0,1fr)_auto_auto]
+            lg:grid-rows-1
           "
         >
           {activeItem && (
-            <div>
-              <h3 className="font-display text-2xl font-semibold">{activeItem.title}</h3>
-              <p className="mt-1 max-w-xl text-sm leading-relaxed text-[#50463d]">{activeItem.description}</p>
-              <Link href={activeItem.button.href} className="brand-button mt-2 inline-flex min-h-11 items-center gap-2 rounded px-2 text-sm font-semibold text-[#805008] hover:bg-[#f2e8da]">
+            <div className="flex h-full min-w-0 flex-col items-start">
+              <div className="min-h-0 w-full overflow-y-auto wrap-anywhere" tabIndex={0}>
+                <h3 className="font-display text-2xl font-semibold">{activeItem.title}</h3>
+                <p className="mt-1 max-w-xl text-sm leading-relaxed text-[#50463d]">{activeItem.description}</p>
+              </div>
+              <Link href={activeItem.button.href} className="brand-button mt-2 inline-flex min-h-11 shrink-0 items-center gap-2 rounded px-2 text-sm font-semibold text-[#805008] hover:bg-[#f2e8da]">
                 {activeItem.button.label}
                 <ArrowRight size={16} aria-hidden="true" />
               </Link>

@@ -2,15 +2,33 @@
 
 import type { ReactNode } from "react";
 import { motion, useReducedMotion, type Variants } from "framer-motion";
-import { Camera, SquarePlay } from "lucide-react";
 
 type Social = { label: string; href?: string | null };
 
 const socialIcons: Record<string, ReactNode> = {
-  Facebook: <span className="text-base font-extrabold">f</span>,
-  Instagram: <Camera size={16} />,
-  LinkedIn: <span className="text-[11px] font-extrabold">in</span>,
-  YouTube: <SquarePlay size={14} />,
+  Facebook: (
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+      <path d="M14 24V13h3.7l.6-4H14V6.5c0-1.2.3-2 2.1-2h2.3V.9A29 29 0 0 0 15 .7c-3.4 0-5.7 2.1-5.7 5.9V9H5.5v4h3.8v11z" />
+    </svg>
+  ),
+  Instagram: (
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+      <rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" strokeWidth="2" />
+      <circle cx="12" cy="12" r="4" stroke="currentColor" strokeWidth="2" />
+      <circle cx="17.5" cy="6.5" r="1.25" fill="currentColor" />
+    </svg>
+  ),
+  LinkedIn: (
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+      <circle cx="4.5" cy="4.5" r="2.5" />
+      <path d="M2.3 8.5h4.4V22H2.3zm7.2 0h4.2v1.8h.1a4.6 4.6 0 0 1 4.1-2.2c4.4 0 5.2 2.8 5.2 6.4V22h-4.4v-6.6c0-1.6 0-3.6-2.2-3.6s-2.6 1.7-2.6 3.5V22H9.5z" />
+    </svg>
+  ),
+  YouTube: (
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+      <path fillRule="evenodd" d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2C0 8.1 0 12 0 12s0 3.9.5 5.8a3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1c.5-1.9.5-5.8.5-5.8s0-3.9-.5-5.8ZM9.6 15.6V8.4l6.2 3.6-6.2 3.6Z" />
+    </svg>
+  ),
 };
 
 const socialStyle =

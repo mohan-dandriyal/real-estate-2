@@ -7,7 +7,7 @@ import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import { heroData } from "@/type/template.type";
 
 export default function HeroSection() {
-    const { slides, settings, quickLinks } = heroData;
+    const { slides, settings } = heroData;
     const [index, setIndex] = useState(0);
     const reduceMotion = useReducedMotion();
     const slide = slides[index];
@@ -29,9 +29,9 @@ export default function HeroSection() {
         <section
             id="home"
             aria-labelledby="hero-title"
-            className="relative isolate flex flex-col overflow-hidden bg-[#faf7f1] text-[#102139] md:min-h-[clamp(36rem,49vw,48rem)]"
+            className="relative isolate flex h-[min(30rem,calc(100svh-76px))] flex-col overflow-hidden bg-[#faf7f1] text-[#102139] md:h-[min(38rem,calc(100svh-76px))]"
         >
-            <div className="relative order-2 aspect-[16/9] overflow-hidden md:absolute md:inset-y-0 md:right-0 md:aspect-auto md:w-[76%]">
+            <div className="relative order-2 h-[44%] shrink-0 overflow-hidden md:absolute md:inset-y-0 md:right-0 md:h-auto md:w-[76%]">
                 <AnimatePresence initial={false}>
                     {slide && (
                         <motion.div
@@ -58,9 +58,9 @@ export default function HeroSection() {
                 <div aria-hidden="true" className="pointer-events-none absolute inset-0 bg-linear-to-t from-[#faf7f1] to-transparent to-20% md:to-30%" />
             </div>
 
-            <div className="page-container relative flex grow flex-col justify-center pt-14 pb-5 sm:pt-16 md:py-16">
+            <div className="page-container relative flex min-h-0 grow flex-col overflow-y-auto py-4 md:py-6">
                 <AnimatePresence initial={false}>
-                    <div key={slide.id} className="max-w-xl md:max-w-[52%]">
+                    <div key={slide.id} className="my-auto max-w-xl wrap-anywhere md:max-w-[52%]">
                         <motion.h1
                             id="hero-title"
                             initial={reduceMotion ? false : { opacity: 0, y: 16 }}
@@ -84,15 +84,8 @@ export default function HeroSection() {
                 </AnimatePresence>
             </div>
 
-            <div className="page-container relative z-10 order-3 flex flex-wrap items-center justify-between gap-x-6 gap-y-1 pt-2 pb-5 md:pb-7">
-                <nav aria-label="Explore PrimeEstate" className="flex flex-wrap items-center gap-x-5 sm:gap-x-8">
-                    {quickLinks.map(({ href, label }) => (
-                        <a key={href} href={href} className="inline-flex min-h-11 items-center font-display text-xl font-semibold hover:underline">
-                            {label}
-                        </a>
-                    ))}
-                </nav>
-                {slides.length > 1 && (
+            {slides.length > 1 && (
+                <div className="page-container relative z-10 order-3 flex shrink-0 justify-center pb-2 md:justify-end md:pb-4">
                     <div role="group" aria-label="Hero images" className="flex items-center gap-1 rounded-full bg-[#faf7f1]/90 px-2">
                         {slides.map((item, slideIndex) => (
                             <button
@@ -107,8 +100,8 @@ export default function HeroSection() {
                             </button>
                         ))}
                     </div>
-                )}
-            </div>
+                </div>
+            )}
         </section>
     );
 }
